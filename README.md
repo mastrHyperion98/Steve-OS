@@ -9,8 +9,14 @@ To create a hobby operating system from scratch building upon the aforementioned
 * file-system (probably fat32, but ideally ext4)
 * basic memory management
 * have a user interface
+* write C driver to allow the use of a mouse, and by extension have a mouse cursor. 
 * allow the operating system to run simple C programs. 
-* decide between a modular or monolithic kernel
+
+# Technical Details
+
+* Kernel Type: Undecided (either modular or monolithic)
+* Single Tasking OS. No premptive scheduling and the kernel only handles a single task at a time. 
+* FCFS cpu scheduling. 
 
 # Development and Contribution
 
