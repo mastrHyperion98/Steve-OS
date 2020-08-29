@@ -11,7 +11,7 @@ To create a hobby operating system from scratch building upon the aforementioned
 * file-system (probably fat12, fat16 or ext2)
 * basic memory management
 * command line interface
-* write C driver for display and keyboard.
+* write C driver for display and keyboard and disk drive.
 * allow the operating system to run and execute simple C programs stored on the disk. 
 
 # Development and Contribution
