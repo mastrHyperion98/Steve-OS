@@ -1,31 +1,30 @@
 # Description
 
-Steve OS is a revisit of a project I did in high school. Steve OS was a very basic, barebone and simplistic single tasking "operating system" operating in sixteen-bit mode. The original project was written entirely in x86 assembly. However, I was naive back in the day and the source code has been lost. The ISO for the original project will be uploaded under release. 
-
-This is a project I intend to do over a prolonged period of time. It is not a quick nor easy project. It requires a lot of work, research and low level understanding of the hardware.
+Steve OS was a project I first worked on at the age of 16 years old for a High School Science Fair. It was one of my first "real" programming project after having learned HTML. Yeah I went straight from HTML to x86 ASM. My idiot younbger self didn't know about Git at the time. The source code has long been lost, unfortunately. However I have retained the bootable image of the project which can be found in the release section of this repository. 
 
 # Objective
 
-To create a hobby operating system from scratch building upon the aforementioned high school project that I did. I want to bring the project to another level and focus on implementing the following features: 
-* 32-bit mode
-* file-system (probably fat12, fat16 or ext2)
-* basic memory management
-* command line interface
-* write C driver for display and keyboard and disk drive.
-* allow the operating system to run and execute simple C programs stored on the disk. 
+The objective of this project is to develop my knowledge for low-level development for things like drivers and developing a host-environment. Namely, I hope to achieve while in 32-bit mode: 
 
-# Development and Contribution
+* Keyboard input
+* Fat filesystem
+* CPU Scheduling, context switching & multi-threading
 
-The project is something I want to accomplish on my own. It is my own little hobby. So I wont describe the tools needed to participate in development. The repo is public because i dont mind people looking at, forking or downloading the project. However, I do not expect nor do I want contribution from other members of the community. 
 
 # Languages Used
 
 * x86 Assembly
 * c/c++
-* python (maybe)
 
 # Tools used
-* qemu
-* nasm
-* VS Code
-* gcc
+
+* The GNU Linker from Binutils to link your object files into the final kernel.
+* The GNU Assembler from Binutils (or optionally NASM) to assemble instructions into object files containing machine code.
+* The GNU Compiler Collection to compile your high level code into assembly.
+* The C programming language (or optionally C++) to write the high level parts of your kernel.
+* The GRUB bootloader to bootload your kernel using the Multiboot boot protocol that loads us into 32-bit protected mode with paging disabled.
+* The ELF as the executable format that gives us control of where and how the kernel is loaded. 
+
+# Old project
+
+The high school project was built completely from scratch and written only in X86 ASM. Stayed in 16 bit mode and within the comfort of the bios intercepts to handle a lot of the "heavy work". Used a stack for the password screen, btw the password is ROSA16.
